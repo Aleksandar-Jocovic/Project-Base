@@ -1,0 +1,46 @@
+.about-vrap {
+  height: 50%;
+  width: 100%;
+  padding: 50px 20px;
+  .about {
+    .project {
+      color: $light-darken;
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      text-align-last: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.right-cut-vrap {
+  height: 55vh;
+  width: 95%;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.right-cut {
+  height: 100%;
+  width: 100%;
+  background: $dark;
+  z-index: 2;
+}
+
+.left-cut {
+  position: absolute;
+  top: 2.5vh;
+  right: 0;
+  width: 95%;
+  height: 50vh;
+  background: url('../images/black-and-white-board-boardroom-business-260689.jpg');
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  overflow: hidden;
+  .layer-small {
+    height: 50vh;
+    background: $layer-color;
+  }
+}

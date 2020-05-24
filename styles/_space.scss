@@ -1,0 +1,167 @@
+
+
+.small-images {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  // margin-bottom: -45px;
+  width: 360px;
+  
+  
+
+  //margin-bottom: 150px;
+  background: $light;
+
+  // left: -30px;
+
+}
+.hexagon-vrap-vrap {
+  height: 150px;
+  width: 180px;
+  overflow: hidden;
+  transition: 0.4s;
+
+/*     transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg); */
+  // margin: 0 auto;
+  
+}
+
+
+
+
+.hexagon-vrap {
+  width: 300px;
+  height: 150px;
+  position: relative;
+  left: -62px;
+  transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  overflow: hidden;
+  
+}
+
+.hexagon-vrap-vrap:hover {
+  transform: scale(1.1) ;
+  .layer-dark{
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.hexagon {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -o-transform: rrotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  overflow: hidden;
+}
+
+.hexagon-img {
+  width: 100%;
+  height: 100%;
+  background: url('../images/keyboard.jpg');
+  background-size: 100% 100%;
+  background-size: cover;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+    transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -o-transform: rrotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  .layer-dark{
+    height: 200px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.4s;
+  }
+}
+
+
+.hexagon-vrap-vrap:nth-child(2) {
+  position: absolute;
+  left: 140px;
+  top: 80px;
+          .hexagon-img {
+          background: url('../images/interrionr.jpg');
+        }
+}
+
+.hexagon-vrap-vrap:nth-child(3) {
+  position: relative;
+  left: 0px;
+  top: 10px;
+  .hexagon-img {
+    background: url('../images/mug.jpg');
+  }
+}
+
+.hexagon-vrap-vrap:nth-child(4) {
+  height: 200px;
+  width: 240px;
+  position: relative;
+  // top: 240px;
+  top: -50px;
+  left: 125px;
+    .hexagon-vrap {
+      width: 400px;
+      height: 200px;
+      position: relative;
+      left: -80px;
+        .hexagon-img {
+          background: url('../images/chairs.jpg');
+        }
+    }
+}
+
+.left-decor, .right-decor {
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $background;
+  z-index: 1;
+}
+
+.right-decor {
+  left: unset;
+  right: 0;
+}
+
+.right-decor::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 50px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent  $background transparent transparent;
+  z-index: 3;
+}
+
+.left-decor::after {
+    content: "";
+  display: inline-block;
+  position: absolute;
+  left: 50px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 0 0;
+  border-color:  $background transparent transparent transparent;
+  z-index: 3;
+}

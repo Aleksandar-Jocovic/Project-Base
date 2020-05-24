@@ -1,0 +1,649 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section {
+  max-width: 1600px;
+  margin: 0 auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  margin-bottom: 100px;
+  overflow: hidden;
+  background: #fff;
+}
+
+section:nth-child(1) {
+  background: url("../images/classroom.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+section:nth-child(2) {
+  margin-bottom: 0px;
+  background: #D4D4D4;
+  margin-bottom: 100px;
+}
+
+#our-his-section {
+  max-width: 1600px;
+  margin: 0 auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+  background: #424242;
+}
+
+section:nth-child(4) {
+  background: #D4D4D4;
+  margin: 0;
+}
+
+section:nth-child(4) h2 {
+  padding-top: 40px;
+}
+
+section:nth-child(4) p {
+  padding: 5% 10%;
+}
+
+.layer {
+  height: 100vh;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.base-black-vrap {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.base-black {
+  width: 200px;
+  height: 200px;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  border: 4px solid #949494;
+  background: #424242;
+  z-index: 2;
+}
+
+.top-title {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #949494;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  text-align-last: center;
+  z-index: 2;
+}
+
+.bottom-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10%;
+  /* transform: translateX(-50%); */
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  text-align-last: center;
+  z-index: 2;
+}
+
+footer {
+  background: #333232;
+  height: 20vh;
+  line-height: 20vh;
+}
+
+footer .footer-text {
+  color: #949494;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  text-align-last: center;
+}
+
+.introduction {
+  min-width: 90%;
+  min-height: 65%;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 15% 5%;
+  z-index: 1;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 38px;
+  text-align: center;
+  color: #333232;
+  /*  opacity: 0;
+  position: relative;
+  top: 20px; */
+}
+
+.border-div {
+  width: 100px;
+  height: 5px;
+  background-color: #424242;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  /*   top: 20px;
+  opacity: 0; */
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 19px;
+  color: #333232;
+  text-align: center;
+  /*  opacity: 0;
+    position: relative;
+    top: 20px; */
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.show-on-scroll-title {
+  -webkit-animation: titleAnim  2s forwards ease;
+          animation: titleAnim  2s forwards ease;
+}
+
+@-webkit-keyframes titleAnim {
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes titleAnim {
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.about-vrap {
+  height: 50%;
+  width: 100%;
+  padding: 50px 20px;
+}
+
+.about-vrap .about .project {
+  color: #949494;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  text-align-last: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.right-cut-vrap {
+  height: 55vh;
+  width: 95%;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.right-cut {
+  height: 100%;
+  width: 100%;
+  background: #424242;
+  z-index: 2;
+}
+
+.left-cut {
+  position: absolute;
+  top: 2.5vh;
+  right: 0;
+  width: 95%;
+  height: 50vh;
+  background: url("../images/black-and-white-board-boardroom-business-260689.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.left-cut .layer-small {
+  height: 50vh;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.our-history {
+  margin-bottom: 100px;
+  padding: 5% 10%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.our-history .border-div {
+  background: #949494;
+  width: 70px;
+  height: 2px;
+  margin-top: 10px;
+}
+
+.our-history .history {
+  color: #949494;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 2;
+}
+
+.our-history p {
+  color: #D4D4D4;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.layer-history {
+  position: absolute;
+  right: 0;
+  width: 90%;
+  height: 50vh;
+  background: rgba(148, 148, 148, 0.3);
+}
+
+.image-vrap:nth-child(2) .layer-history,
+.image-vrap:nth-child(4) .layer-history {
+  width: 100%;
+}
+
+.image-vrap:nth-child(3) .layer-history {
+  left: 0;
+}
+
+.small-images {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 360px;
+  background: #D4D4D4;
+}
+
+.hexagon-vrap-vrap {
+  height: 150px;
+  width: 180px;
+  overflow: hidden;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  /*     transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg); */
+}
+
+.hexagon-vrap {
+  width: 300px;
+  height: 150px;
+  position: relative;
+  left: -62px;
+  transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  overflow: hidden;
+}
+
+.hexagon-vrap-vrap:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.hexagon-vrap-vrap:hover .layer-dark {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hexagon {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -o-transform: rrotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  overflow: hidden;
+}
+
+.hexagon-img {
+  width: 100%;
+  height: 100%;
+  background: url("../images/keyboard.jpg");
+  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -o-transform: rrotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+}
+
+.hexagon-img .layer-dark {
+  height: 200px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.hexagon-vrap-vrap:nth-child(2) {
+  position: absolute;
+  left: 140px;
+  top: 80px;
+}
+
+.hexagon-vrap-vrap:nth-child(2) .hexagon-img {
+  background: url("../images/interrionr.jpg");
+}
+
+.hexagon-vrap-vrap:nth-child(3) {
+  position: relative;
+  left: 0px;
+  top: 10px;
+}
+
+.hexagon-vrap-vrap:nth-child(3) .hexagon-img {
+  background: url("../images/mug.jpg");
+}
+
+.hexagon-vrap-vrap:nth-child(4) {
+  height: 200px;
+  width: 240px;
+  position: relative;
+  top: -50px;
+  left: 125px;
+}
+
+.hexagon-vrap-vrap:nth-child(4) .hexagon-vrap {
+  width: 400px;
+  height: 200px;
+  position: relative;
+  left: -80px;
+}
+
+.hexagon-vrap-vrap:nth-child(4) .hexagon-vrap .hexagon-img {
+  background: url("../images/chairs.jpg");
+}
+
+.left-decor, .right-decor {
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.right-decor {
+  left: unset;
+  right: 0;
+}
+
+.right-decor::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 50px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #fff transparent transparent;
+  z-index: 3;
+}
+
+.left-decor::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 50px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 0 0;
+  border-color: #fff transparent transparent transparent;
+  z-index: 3;
+}
+
+.image-vrap {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 600px;
+  height: 40vh;
+  min-height: 300px;
+  top: 300px;
+  position: -webkit-sticky;
+  position: sticky;
+  margin-bottom: 60px;
+  -webkit-perspective: 3700px;
+          perspective: 3700px;
+  overflow: hidden;
+}
+
+#img1,
+#img2,
+#img3,
+#img4 {
+  width: 100%;
+  max-width: 600px;
+  height: 40vh;
+  min-height: 300px;
+  background: olive;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#img1 {
+  background: url("../images/keyboard.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#img2 {
+  background: url("../images/space1.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#img3 {
+  background: url("../images/ballpen.jpg") no-repeat;
+}
+
+#img4 {
+  background: url("../images/chairs-big.jpg") no-repeat;
+}
+
+@media (min-width: 350px) {
+  p {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 49px;
+  }
+}
+
+@media (min-width: 550px) {
+  .introduction {
+    min-width: 80%;
+    min-height: 65%;
+  }
+  .image-vrap {
+    width: 90%;
+  }
+}
+
+@media (min-width: 771px) {
+  .right-cut-vrap {
+    width: 50%;
+    height: 50vh;
+    margin-top: unset;
+    z-index: 0;
+  }
+  .left-cut {
+    width: 50%;
+    top: 0px;
+  }
+  .about-vrap {
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    position: relative;
+    top: -395px;
+    margin-bottom: -400px;
+    width: 100%;
+    padding: 0;
+    height: 660px;
+    background: #fff;
+    overflow: visible;
+  }
+  .about-vrap .about {
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: #D4D4D4;
+    width: 100%;
+    height: 100%;
+    padding-top: 170px;
+    position: relative;
+    top: 100px;
+    z-index: 15;
+  }
+  .about-vrap .about p {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .small-images {
+    width: 500px;
+  }
+  .hexagon-vrap-vrap {
+    height: 200px;
+    width: 260px;
+  }
+  .hexagon-vrap {
+    width: 400px;
+    height: 200px;
+  }
+  .hexagon-vrap-vrap:nth-child(2) {
+    left: 187px;
+    top: 108px;
+  }
+  .hexagon-vrap-vrap:nth-child(3) {
+    position: relative;
+    left: 0px;
+    top: 14px;
+  }
+  .hexagon-vrap-vrap:nth-child(4) {
+    height: 250px;
+    width: 320px;
+    position: relative;
+    top: -75px;
+    left: 170px;
+  }
+  .hexagon-vrap-vrap:nth-child(4) .hexagon-vrap {
+    width: 500px;
+    height: 250px;
+    position: relative;
+    left: -80px;
+  }
+  .hexagon-vrap-vrap:nth-child(4) .hexagon-vrap .hexagon-img {
+    background: url("../images/chairs-big.jpg");
+  }
+  .left-decor,
+  .right-decor {
+    width: 300px;
+  }
+  .left-decor,
+  .right-decor {
+    width: 150px;
+  }
+  .right-decor::before {
+    right: 150px;
+  }
+  .left-decor::after {
+    left: 150px;
+  }
+  .image-vrap {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1050px) {
+  .small-images {
+    width: 700px;
+  }
+  .small-images .layer-dark {
+    height: 300px;
+  }
+  .hexagon-vrap-vrap {
+    height: 250px;
+    width: 340px;
+  }
+  .hexagon-vrap {
+    width: 500px;
+    height: 250px;
+  }
+  .hexagon-vrap-vrap:nth-child(2) {
+    left: 234px;
+    top: 134px;
+  }
+  .hexagon-vrap-vrap:nth-child(3) {
+    position: relative;
+    left: 0px;
+    top: 20px;
+  }
+  .hexagon-vrap-vrap:nth-child(4) {
+    height: 320px;
+    width: 420px;
+    position: relative;
+    top: -94px;
+    left: 210px;
+  }
+  .hexagon-vrap-vrap:nth-child(4) .hexagon-vrap {
+    width: 625px;
+    height: 320px;
+    position: relative;
+    left: -80px;
+  }
+  .hexagon-vrap-vrap:nth-child(4) .hexagon-vrap .hexagon-img {
+    background: url("../images/chairs-big.jpg");
+  }
+}
+/*# sourceMappingURL=styles.css.map */

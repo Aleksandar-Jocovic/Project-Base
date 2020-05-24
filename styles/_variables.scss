@@ -1,0 +1,12 @@
+$light-darken: #949494;
+$light: #D4D4D4;
+$dark: #424242;
+$layer-color: rgba(255, 255, 255, 0.4);
+$background : #fff;
+$dark-darken: #333232;
+
+@mixin small-title {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  text-align-last: center;
+}

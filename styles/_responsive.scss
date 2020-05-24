@@ -1,0 +1,161 @@
+@media (min-width: 350px) {
+  p {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 49px;
+  }
+}
+
+@media (min-width: 550px) {
+  .introduction {
+    min-width: 80%;
+    min-height: 65%;
+  }
+
+  .image-vrap {
+    width: 90%;
+  }
+}
+
+@media (min-width: 771px) {
+  .right-cut-vrap {
+    width: 50%;
+    height: 50vh;
+    margin-top: unset;
+    z-index: 0;
+  }
+  .left-cut {
+    width: 50%;
+    top: 0px;
+  }
+
+  .about-vrap {
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    position: relative;
+    top: -395px;
+    margin-bottom: -400px;
+    width: 100%;
+    padding: 0;
+    height: 660px;
+
+    background: $background;
+    overflow: visible;
+    .about {
+      -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      background: $light;
+      width: 100%;
+      height: 100%;
+      padding-top: 170px;
+      position: relative;
+      top: 100px;
+      z-index: 15;
+      p {
+        width: 40%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .small-images {
+    width: 500px;
+  }
+  .hexagon-vrap-vrap {
+    height: 200px;
+    width: 260px;
+  }
+  .hexagon-vrap {
+    width: 400px;
+    height: 200px;
+  }
+  .hexagon-vrap-vrap:nth-child(2) {
+    // position: absolute;
+    left: 187px;
+    top: 108px;
+  }
+  .hexagon-vrap-vrap:nth-child(3) {
+    position: relative;
+    left: 0px;
+    top: 14px;
+  }
+  .hexagon-vrap-vrap:nth-child(4) {
+    height: 250px;
+    width: 320px;
+    position: relative;
+    // top: 240px;
+    top: -75px;
+    left: 170px;
+    .hexagon-vrap {
+      width: 500px;
+      height: 250px;
+      position: relative;
+      left: -80px;
+      .hexagon-img {
+        background: url('../images/chairs-big.jpg');
+      }
+    }
+  }
+  .left-decor,
+  .right-decor {
+    width: 300px;
+  }
+
+  .left-decor,
+  .right-decor {
+    width: 150px;
+  }
+  .right-decor::before {
+    right: 150px;
+  }
+  .left-decor::after {
+    left: 150px;
+  }
+
+  .image-vrap {
+    width: 90%;
+  }
+}
+@media (min-width: 1050px) {
+  .small-images {
+    width: 700px;
+    .layer-dark {
+      height: 300px;
+    }
+  }
+  .hexagon-vrap-vrap {
+    height: 250px;
+    width: 340px;
+  }
+  .hexagon-vrap {
+    width: 500px;
+    height: 250px;
+  }
+  .hexagon-vrap-vrap:nth-child(2) {
+    left: 234px;
+    top: 134px;
+  }
+  .hexagon-vrap-vrap:nth-child(3) {
+    position: relative;
+    left: 0px;
+    top: 20px;
+  }
+  .hexagon-vrap-vrap:nth-child(4) {
+    height: 320px;
+    width: 420px;
+    position: relative;
+    // top: 240px;
+    top: -94px;
+    left: 210px;
+    .hexagon-vrap {
+      width: 625px;
+      height: 320px;
+      position: relative;
+      left: -80px;
+      .hexagon-img {
+        background: url('../images/chairs-big.jpg');
+      }
+    }
+  }
+}

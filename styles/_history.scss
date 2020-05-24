@@ -1,0 +1,46 @@
+.our-history {
+  margin-bottom: 100px;
+  padding: 5% 10%;
+  position: sticky;
+  top: 0;
+
+  .border-div {
+    background: $light-darken;
+    width: 70px;
+    height: 2px;
+    margin-top: 10px;
+  }
+
+  .history {
+    color: $light-darken;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2;
+  }
+  p {
+    color: $light;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+.layer-history {
+  position: absolute;
+  right: 0;
+  width: 90%;
+  height: 50vh;
+  background: rgba($color: $light-darken, $alpha: 0.3);
+}
+
+.image-vrap:nth-child(2),
+.image-vrap:nth-child(4) {
+  .layer-history {
+    width: 100%;
+  }
+}
+.image-vrap:nth-child(3) {
+  .layer-history {
+    left: 0;
+  }
+}
