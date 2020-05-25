@@ -1,17 +1,17 @@
-let imgOne = document.getElementById('el1');
-let imgTwo = document.getElementById('el2');
-let imgThree = document.getElementById('el3');
-let imgFour = document.getElementById('el4');
+const imgOne = document.getElementById('el1');
+const imgTwo = document.getElementById('el2');
+const imgThree = document.getElementById('el3');
+const imgFour = document.getElementById('el4');
 
-let img1 = document.getElementById('img1');
-let img2 = document.getElementById('img2');
-let img3 = document.getElementById('img3');
+const img1 = document.getElementById('img1');
+const img2 = document.getElementById('img2');
+const img3 = document.getElementById('img3');
 
 window.onscroll = function () {
-  let rect1 = imgOne.getBoundingClientRect();
-  let rect2 = imgTwo.getBoundingClientRect();
-  let rect3 = imgThree.getBoundingClientRect();
-  let rect4 = imgFour.getBoundingClientRect();
+  const rect1 = imgOne.getBoundingClientRect();
+  const rect2 = imgTwo.getBoundingClientRect();
+  const rect3 = imgThree.getBoundingClientRect();
+  const rect4 = imgFour.getBoundingClientRect();
 
   let angle = 21.6 - (rect2.top - rect1.height) / 7;
   let opac = ((rect2.top - rect1.height) * 2) / rect4.height;
@@ -44,3 +44,24 @@ const overlap = (firstBox, secondBox, angle, opac, img) => {
     img.style.opacity = `1`;
   }
 };
+
+const menuBtn = document.querySelector('.menu-button')
+const menu = document.querySelector('.menu')
+
+
+const toggleMenu = () => {
+
+  if (!menuBtn.classList.contains('active-button')) {
+
+  }
+
+  if (!menu.classList.contains('active-menu')) {
+    menu.classList.add('active-menu');
+    menuBtn.classList.add('active-menu-button')
+  } else {
+    menu.classList.remove('active-menu');
+    menuBtn.classList.remove('active-menu-button');
+  }
+}
+
+menuBtn.addEventListener('click', toggleMenu)

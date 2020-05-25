@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-section {
+.page {
   max-width: 1600px;
   margin: 0 auto;
   height: fit-content;
@@ -15,17 +15,18 @@ section {
   background: $background;
 }
 
-section:nth-child(1) {
+#introduction {
   background: url('../images/classroom.jpg');
   background-position: center;
   background-size: cover;
 }
 
-section:nth-child(2) {
+#about {
   margin-bottom: 0px;
   background: $light;
   margin-bottom: 100px;
 }
+
 //changed to div bcz overflov hidden and position sticky issue
 #our-his-section  {
     max-width: 1600px;
@@ -38,7 +39,7 @@ section:nth-child(2) {
   background: $dark;
 }
 
-section:nth-child(4) {
+#our-space {
   background: $light;
   margin: 0;
   h2 {
@@ -79,6 +80,7 @@ section:nth-child(4) {
   left: 50%;
   transform: translateX(-50%);
   color: $light-darken;
+  font-size: 24px;
   @include small-title;
   z-index: 2;
 }
@@ -122,10 +124,10 @@ h2 {
   font-size: 38px;
   text-align: center;
   color: $dark-darken; 
- /*  opacity: 0;
+  opacity: 0;
   position: relative;
-  top: 20px; */
-  // transition: 0.8s ease;
+  top: 20px;
+  //transition: 0.8s ease;
 }
 
 
@@ -136,22 +138,22 @@ h2 {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-/*   top: 20px;
-  opacity: 0; */
-  animation-delay: 0.9s;
+  top: 20px;
+  opacity: 0;
+  animation-delay: 500ms;
 }
   p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 19px;
     color: $dark-darken;
     text-align: center;
-   /*  opacity: 0;
+    opacity: 0;
     position: relative;
-    top: 20px; */
-    animation-delay: 1.5s;
+    top: 20px;
+    animation-delay: 1s;
   }
 .show-on-scroll-title { 
-  animation: titleAnim  2s forwards ease;
+  animation: titleAnim  1s forwards ease;
 }
 
 @keyframes titleAnim {
