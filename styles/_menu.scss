@@ -1,6 +1,5 @@
 .menu-button {
   position: fixed;
-  width: 33px;
   height: 27px;
   top: 25px;
   left: 20px;
@@ -23,6 +22,7 @@
 }
 
 .menu {
+  width: 33px;
   position: fixed;
   top: 0;
   left: -300px;
@@ -32,7 +32,7 @@
   z-index: 3;
   transition: 400ms;
   .menu-list {
-    margin-top: 200px;
+    margin-top: 100px;
     height: 50%;
     font-size: 18px;
     display: flex;
@@ -42,6 +42,8 @@
     @include small-title;
     li {
       list-style: none;
+        z-index: 6;
+
       a {
         text-decoration: none;
         color: $light;
@@ -66,12 +68,12 @@
   #line1 {
     transform: rotateZ(-45deg);
     width: 20px;
+    top: 5px;
   }
   #line2 {
     transform: rotateZ(45deg);
-    top: 3.5px;
+    top: 8.5px;
     width: 20px;
-
   }
 }
 
@@ -84,12 +86,33 @@
   fill: $light-darken;
 }
 
-.icons {
+.icons { 
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-end;
   height: 30%;
+  a {
+    z-index: 6;
+  }
 }
 .fill {
   fill: $light;
+}
+
+// layer for javascript to close menu on outside click
+#menu-layer {
+  position: absolute;
+  height: 100vh; 
+  width: 100%;
+  //background-color: rgba(255, 0, 0, 0.733);
+  z-index: 4;
+}
+
+#menu-btn {
+  position: absolute;
+  top: 0;
+  width: 27px;
+  height: 27px;
+  //background: rgba(255, 166, 0, 0.719);
+  z-index: 5;
 }

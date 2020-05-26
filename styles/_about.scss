@@ -9,8 +9,14 @@
       text-transform: uppercase;
       text-align-last: center;
       font-size: 22px;
-      margin-bottom: 20px;
+      //margin-bottom: 10px;
     }
+  }
+  .border-div {
+    background: $light-darken;
+    width: 90px;
+    height: 4px;
+    margin-top: 10px;
   }
 }
 

@@ -4,31 +4,27 @@ var scroll = window.requestAnimationFrame ||
   };
 
 var elementsToShow = document.querySelectorAll('.show-on-scroll');
-var hexagon = document.getElementById('off-viewport-animation');
-var hexagon2 = document.getElementById('off-viewport-animation2');
+var hexagonFirst = document.getElementById('off-viewport-animation');
+var hexagonLast = document.getElementById('off-viewport-animation2');
+let hex = document.querySelectorAll('.hex-anim')
 
 
 
 
 function loop() {
 
-  elementsToShow.forEach(function (element) {
+  elementsToShow.forEach(element => {
     if (isElementInViewport(element)) {
       element.classList.add('show-on-scroll-title');
     }
   })
 
-  if (isElementInViewport(hexagon)) {
-    hexagon.classList.remove('off-viewport')
-  }
-
-  if (isElementInViewport(hexagon2)) {
-    hexagon2.classList.remove('off-viewport')
-  }
-
-
-
-
+  hex.forEach(el => {
+    if (isElementInViewport(el) && !el.classList.contains('off-viewport')) {
+      el.classList.add('off-viewport')
+      console.log('aaa')
+    }
+  })
 
   scroll(loop);
 }

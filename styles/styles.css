@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
 .menu-button {
   position: fixed;
-  width: 33px;
   height: 27px;
   top: 25px;
   left: 20px;
@@ -27,6 +26,7 @@
 }
 
 .menu {
+  width: 33px;
   position: fixed;
   top: 0;
   left: -300px;
@@ -39,7 +39,7 @@
 }
 
 .menu .menu-list {
-  margin-top: 200px;
+  margin-top: 100px;
   height: 50%;
   font-size: 18px;
   display: -webkit-box;
@@ -62,6 +62,7 @@
 
 .menu .menu-list li {
   list-style: none;
+  z-index: 6;
 }
 
 .menu .menu-list li a {
@@ -87,12 +88,13 @@
   -webkit-transform: rotateZ(-45deg);
           transform: rotateZ(-45deg);
   width: 20px;
+  top: 5px;
 }
 
 .active-menu-button #line2 {
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
-  top: 3.5px;
+  top: 8.5px;
   width: 20px;
 }
 
@@ -111,14 +113,33 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   height: 30%;
+}
+
+.icons a {
+  z-index: 6;
 }
 
 .fill {
   fill: #D4D4D4;
+}
+
+#menu-layer {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 4;
+}
+
+#menu-btn {
+  position: absolute;
+  top: 0;
+  width: 27px;
+  height: 27px;
+  z-index: 5;
 }
 
 * {
@@ -168,15 +189,11 @@
 
 #our-space {
   background: #D4D4D4;
-  margin: 0;
+  margin: 0 auto;
 }
 
 #our-space h2 {
   padding-top: 40px;
-}
-
-#our-space p {
-  padding: 5% 10%;
 }
 
 .layer {
@@ -200,9 +217,7 @@
   height: 200px;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
-  border: 4px solid #949494;
   background: #424242;
-  z-index: 2;
 }
 
 .top-title {
@@ -283,14 +298,15 @@ h2 {
 
 p {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 19px;
+  font-size: 24px;
   color: #333232;
   text-align: center;
   opacity: 0;
   position: relative;
   top: 20px;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  padding: 5% 5%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .show-on-scroll-title {
@@ -324,7 +340,13 @@ p {
   text-transform: uppercase;
   text-align-last: center;
   font-size: 22px;
-  margin-bottom: 20px;
+}
+
+.about-vrap .border-div {
+  background: #949494;
+  width: 90px;
+  height: 4px;
+  margin-top: 10px;
 }
 
 .right-cut-vrap {
@@ -419,11 +441,6 @@ p {
   overflow: hidden;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  /*     transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg); */
 }
 
 .hexagon-vrap {
@@ -482,7 +499,14 @@ p {
   transition: 0.4s;
 }
 
+.hexagon-vrap-vrap:nth-child(1) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .hexagon-vrap-vrap:nth-child(2) {
+  margin-top: 20px;
+  margin-bottom: 20px;
   position: absolute;
   left: 140px;
   top: 80px;
@@ -493,6 +517,8 @@ p {
 }
 
 .hexagon-vrap-vrap:nth-child(3) {
+  margin-top: 10px;
+  margin-bottom: 10px;
   position: relative;
   left: 0px;
   top: 10px;
@@ -503,6 +529,8 @@ p {
 }
 
 .hexagon-vrap-vrap:nth-child(4) {
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 200px;
   width: 240px;
   position: relative;
@@ -563,8 +591,26 @@ p {
 }
 
 .off-viewport {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  -webkit-animation: hexAnim 1s forwards ease-in-out;
+          animation: hexAnim 1s forwards ease-in-out;
+}
+
+@-webkit-keyframes hexAnim {
+  0% {
+  }
+  100% {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@keyframes hexAnim {
+  0% {
+  }
+  100% {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .image-vrap {
@@ -619,12 +665,12 @@ p {
   background: url("../images/chairs-big.jpg") no-repeat;
 }
 
-@media (min-width: 350px) {
+@media (max-width: 320px) {
   p {
-    font-size: 24px;
+    font-size: 21px;
   }
   h2 {
-    font-size: 49px;
+    font-size: 32px;
   }
 }
 
@@ -639,6 +685,12 @@ p {
 }
 
 @media (min-width: 771px) {
+  h2 {
+    font-size: 44px;
+  }
+  p {
+    font-size: 24px;
+  }
   .right-cut-vrap {
     width: 50%;
     height: 50vh;
@@ -675,6 +727,7 @@ p {
   .about-vrap .about p {
     width: 40%;
     margin: 0 auto;
+    padding-top: 20px;
   }
   .small-images {
     width: 500px;
@@ -732,6 +785,13 @@ p {
 }
 
 @media (min-width: 1050px) {
+  h2 {
+    font-size: 48px;
+  }
+  p {
+    font-size: 26px;
+    margin: 50px auto;
+  }
   .small-images {
     width: 700px;
   }

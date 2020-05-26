@@ -4,30 +4,17 @@
   position: relative;
   margin: 0 auto;
   margin-top: 40px;
-
-  // margin-bottom: -45px;
   width: 360px;
-  
-  
-
-  //margin-bottom: 150px;
   background: $light;
-
-  // left: -30px;
-
 }
+
 .hexagon-vrap-vrap {
   height: 150px;
   width: 180px;
   overflow: hidden;
   transition: 0.4s;
-
-/*     transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg); */
-  // margin: 0 auto;
+  // margin-top: 20px;
+  // margin-bottom: 20px;
   
 }
 
@@ -88,8 +75,14 @@
   }
 }
 
+.hexagon-vrap-vrap:nth-child(1) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 .hexagon-vrap-vrap:nth-child(2) {
+  margin-top: 20px;
+  margin-bottom: 20px;
   position: absolute;
   left: 140px;
   top: 80px;
@@ -99,6 +92,8 @@
 }
 
 .hexagon-vrap-vrap:nth-child(3) {
+  margin-top: 10px;
+  margin-bottom: 10px;
   position: relative;
   left: 0px;
   top: 10px;
@@ -108,6 +103,8 @@
 }
 
 .hexagon-vrap-vrap:nth-child(4) {
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 200px;
   width: 240px;
   position: relative;
@@ -170,6 +167,15 @@
 
 
   .off-viewport {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    animation: hexAnim 1s forwards ease-in-out;
+  }
+
+  @keyframes hexAnim {
+    0% {
+
+    }
+    100% {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
