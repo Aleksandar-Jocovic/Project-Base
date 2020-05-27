@@ -3,8 +3,8 @@
   width: 95%;
   max-width: 600px;
   height: 40vh;
-  min-height: 300px;
-  top: 300px;
+  min-height: 290px;
+  top: 260px;
   position: sticky;
   margin-bottom: 60px;
   perspective: 3700px;
@@ -23,28 +23,19 @@
   background-size: cover;
   background-position: center;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 #img1 {
-  background: url('../images/keyboard.jpg') no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: url('../images/keyboard.jpg') no-repeat center center / cover;
 }
 
 #img2 {
-  background: url('../images/space1.jpg') no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: url('../images/space1.jpg') no-repeat center center / cover;
 }
 
 #img3 {
   background: url('../images/ballpen.jpg') no-repeat;
-  // background-size: cover;
-  // background-position: center;
 }
 #img4 {
   background: url('../images/chairs-big.jpg') no-repeat;
-  // background-size: cover;
-  // background-position: center;
 }

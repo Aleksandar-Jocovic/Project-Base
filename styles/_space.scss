@@ -1,5 +1,3 @@
-
-
 .small-images {
   position: relative;
   margin: 0 auto;
@@ -13,13 +11,7 @@
   width: 180px;
   overflow: hidden;
   transition: 0.4s;
-  // margin-top: 20px;
-  // margin-bottom: 20px;
-  
 }
-
-
-
 
 .hexagon-vrap {
   width: 300px;
@@ -32,7 +24,6 @@
   -o-transform: rotate(120deg);
   -webkit-transform: rotate(120deg);
   overflow: hidden;
-  
 }
 
 .hexagon-vrap-vrap:hover {
@@ -45,11 +36,11 @@
 .hexagon {
   width: 100%;
   height: 100%;
-  transform: rotate(-60deg);
-    -moz-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
   -ms-transform: rotate(-60deg);
-  -o-transform: rrotate(-60deg);
+  -o-transform: rotate(-60deg);
   -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
   overflow: hidden;
 }
 
@@ -62,11 +53,11 @@
 
   background-position: center center;
   background-repeat: no-repeat;
-    transform: rotate(-60deg);
-    -moz-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
   -ms-transform: rotate(-60deg);
-  -o-transform: rrotate(-60deg);
+  -o-transform: rotate(-60deg);
   -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
   .layer-dark{
     height: 200px;
     z-index: 2;
@@ -86,9 +77,9 @@
   position: absolute;
   left: 140px;
   top: 80px;
-          .hexagon-img {
-          background: url('../images/interrionr.jpg');
-        }
+    .hexagon-img {
+      background: url('../images/interrionr.jpg');
+    }
 }
 
 .hexagon-vrap-vrap:nth-child(3) {
@@ -97,9 +88,9 @@
   position: relative;
   left: 0px;
   top: 10px;
-  .hexagon-img {
-    background: url('../images/mug.jpg');
-  }
+    .hexagon-img {
+      background: url('../images/mug.jpg');
+    }
 }
 
 .hexagon-vrap-vrap:nth-child(4) {
@@ -108,7 +99,6 @@
   height: 200px;
   width: 240px;
   position: relative;
-  // top: 240px;
   top: -50px;
   left: 125px;
     .hexagon-vrap {
@@ -164,8 +154,6 @@
 }
 
 //animation 
-
-
   .off-viewport {
     animation: hexAnim 1s forwards ease-in-out;
   }

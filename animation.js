@@ -9,10 +9,7 @@ var hexagonLast = document.getElementById('off-viewport-animation2');
 let hex = document.querySelectorAll('.hex-anim')
 
 
-
-
 function loop() {
-
   elementsToShow.forEach(element => {
     if (isElementInViewport(element)) {
       element.classList.add('show-on-scroll-title');
@@ -32,9 +29,6 @@ function loop() {
 loop();
 
 function isElementInViewport(el) {
-  /*   if (typeof jQuery === "function" && el instanceof jQuery) {
-      el = el[0];
-    } */
   var rect = el.getBoundingClientRect();
   return (
     (rect.top <= 0 && rect.bottom >= 0 - rect.height / 2) ||

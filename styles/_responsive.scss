@@ -17,6 +17,12 @@
   .image-vrap {
     width: 90%;
   }
+
+  .our-history {
+    p {
+      padding: 5% 5%;
+    }
+  }
 }
 
 @media (min-width: 771px) {
@@ -123,16 +129,27 @@
 
   .image-vrap {
     width: 90%;
+    top: 320px;
   }
 }
+
 @media (min-width: 1050px) {
+  .image-vrap {
+  top: 360px;
+  }
+
   h2 {
     font-size: 48px;
   }
   p {
     font-size: 26px;
-    margin: 50px auto;
+    margin: 0p auto;
 
+  }
+  .introduction {
+    p {
+      margin-top: 50px;
+    }
   }
   .small-images {
     width: 700px;

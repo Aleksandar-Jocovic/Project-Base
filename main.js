@@ -51,22 +51,6 @@ const overlap = (firstBox, secondBox, angle, opac, img) => {
 const menuBtn = document.querySelector('.menu-button')
 const menu = document.querySelector('.menu')
 
-// Close menu on outside click
-
-window.addEventListener('click', (e) => {
-  if (menu.classList.contains('active-menu')
-    && e.target.id !== 'menu-layer'
-    && e.target.id !== 'menu-btn'
-    && e.target.id !== 'icon') {
-    console.log('ins', e)
-    menu.classList.remove('active-menu');
-    menuBtn.classList.remove('active-menu-button');
-  }
-})
-
-
-
-
 const toggleMenu = () => {
 
   if (!menuBtn.classList.contains('active-button')) {
@@ -84,3 +68,15 @@ const toggleMenu = () => {
 
 menuBtn.addEventListener('click', toggleMenu)
 
+// Close menu on outside click
+
+window.addEventListener('click', (e) => {
+  if (menu.classList.contains('active-menu')
+    && e.target.id !== 'menu-layer'
+    && e.target.id !== 'menu-btn'
+    && e.target.id !== 'icon') {
+    console.log('ins', e)
+    menu.classList.remove('active-menu');
+    menuBtn.classList.remove('active-menu-button');
+  }
+})
