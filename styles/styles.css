@@ -166,6 +166,7 @@
   height: -moz-fit-content;
   height: fit-content;
   background: #fff;
+  overflow: hidden;
 }
 
 #introduction {
@@ -174,7 +175,6 @@
 
 #about {
   background: #D4D4D4;
-  overflow: hidden;
 }
 
 #our-his-section {
@@ -183,13 +183,13 @@
   height: fit-content;
   padding-bottom: 50px;
   background: #424242;
+  overflow: unset;
 }
 
 #our-space {
   background: #D4D4D4;
   margin-bottom: 0;
   padding-bottom: 30px;
-  overflow: hidden;
 }
 
 #our-space h2 {
@@ -229,7 +229,7 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   color: #949494;
-  font-size: 24px;
+  font-size: 20px;
   font-family: 'Orbitron', sans-serif;
   text-transform: uppercase;
   text-align-last: center;
@@ -338,7 +338,7 @@ p {
   font-family: 'Orbitron', sans-serif;
   text-transform: uppercase;
   text-align-last: center;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .about-vrap .border-div {
