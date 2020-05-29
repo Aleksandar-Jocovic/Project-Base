@@ -13,6 +13,7 @@
   margin-bottom: 100px;
   height: fit-content;
   background: $background;
+  overflow: hidden;
 }
 
 #introduction {
@@ -21,21 +22,19 @@
 
 #about {
   background: $light;
-  overflow: hidden;
-
 }
 
 #our-his-section  {
   height: fit-content;
   padding-bottom: 50px;
   background: $dark;
+  overflow: unset;
 }
 
 #our-space {
   background: $light;
   margin-bottom: 0;
   padding-bottom: 30px;
-  overflow: hidden;
   h2 {
     padding-top: 40px;
   }
@@ -71,7 +70,7 @@
   left: 50%;
   transform: translateX(-50%);
   color: $light-darken;
-  font-size: 24px;
+  font-size: 20px;
   @include small-title;
   z-index: 2;
 }
