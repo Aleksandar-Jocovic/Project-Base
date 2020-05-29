@@ -5,9 +5,7 @@
   .about {
     .project {
       color: $light-darken;
-      font-family: 'Orbitron', sans-serif;
-      text-transform: uppercase;
-      text-align-last: center;
+      @include small-title;
       font-size: 22px;
       //margin-bottom: 10px;
     }
