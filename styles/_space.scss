@@ -50,7 +50,6 @@
   background: url('../images/keyboard.jpg');
   background-size: 100% 100%;
   background-size: cover;
-
   background-position: center center;
   background-repeat: no-repeat;
   -moz-transform: rotate(-60deg);
@@ -67,13 +66,13 @@
 }
 
 .hexagon-vrap-vrap:nth-child(1) {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  transform: translateY(15px);
+  will-change: transform;
 }
 
 .hexagon-vrap-vrap:nth-child(2) {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  transform: translateY(15px);
+  will-change: transform;
   position: absolute;
   left: 140px;
   top: 80px;
@@ -83,8 +82,8 @@
 }
 
 .hexagon-vrap-vrap:nth-child(3) {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  transform: translateY(30px);
+  will-change: transform;
   position: relative;
   left: 0px;
   top: 10px;
@@ -94,8 +93,8 @@
 }
 
 .hexagon-vrap-vrap:nth-child(4) {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  transform: translateY(30px);
+  will-change: transform;
   height: 200px;
   width: 240px;
   position: relative;
@@ -155,15 +154,11 @@
 
 //animation 
   .off-viewport {
-    animation: hexAnim 1s forwards ease-in-out;
+    animation: hexAnim 900ms forwards ease-in-out;
   }
 
   @keyframes hexAnim {
-    0% {
-
-    }
     100% {
-      margin-top: 0;
-      margin-bottom: 0;
+      transform: none;
     }
   }

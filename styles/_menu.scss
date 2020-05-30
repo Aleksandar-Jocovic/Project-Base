@@ -24,12 +24,16 @@
   width: 33px;
   position: fixed;
   top: 0;
-  left: -300px;
+  left: 0px;
+  -webkit-transform: translateX(-103%);
+  transform: translateX(-103%);
   width: 300px;
   height: 100vh;
   background: $dark-darken;
   z-index: 3;
-  transition: 400ms;
+  //transition: transform 300ms linear;
+  will-change: transform;
+
   .menu-list {
     margin-top: 100px;
     height: 50%;
@@ -52,8 +56,23 @@
   }
 }
 
+
+
 .active-menu {
-  left: 0;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.menu-animatable {
+    &.menu { 
+      transition: all 230ms ease-in;
+    }  
+}
+
+.active-menu  {
+  &.menu-animatable { 
+    transition: all 300ms ease-out;
+  }  
 }
 
 .active-menu-button {

@@ -53,20 +53,24 @@ const menu = document.querySelector('.menu')
 
 const toggleMenu = () => {
 
-  if (!menuBtn.classList.contains('active-button')) {
-
-  }
+  menu.classList.add('menu-animatable');
 
   if (!menu.classList.contains('active-menu')) {
     menu.classList.add('active-menu');
-    menuBtn.classList.add('active-menu-button')
+    menuBtn.classList.add('active-menu-button');
   } else {
     menu.classList.remove('active-menu');
     menuBtn.classList.remove('active-menu-button');
   }
 }
 
-menuBtn.addEventListener('click', toggleMenu)
+const onTransitionEnd = () => {
+  menu.classList.remove('menu-animatable');
+}
+
+menu.addEventListener('transitionend', onTransitionEnd, false);
+
+menuBtn.addEventListener('click', toggleMenu, false)
 
 // Close menu on outside click
 
@@ -76,6 +80,7 @@ window.addEventListener('click', (e) => {
     && e.target.id !== 'menu-btn'
     && e.target.id !== 'icon') {
     console.log('ins', e)
+    menu.classList.add('menu-animatable');
     menu.classList.remove('active-menu');
     menuBtn.classList.remove('active-menu-button');
   }

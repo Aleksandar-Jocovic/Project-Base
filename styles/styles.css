@@ -28,13 +28,14 @@
   width: 33px;
   position: fixed;
   top: 0;
-  left: -300px;
+  left: 0px;
+  -webkit-transform: translateX(-103%);
+  transform: translateX(-103%);
   width: 300px;
   height: 100vh;
   background: #333232;
   z-index: 3;
-  -webkit-transition: 400ms;
-  transition: 400ms;
+  will-change: transform;
 }
 
 .menu .menu-list {
@@ -72,7 +73,18 @@
 }
 
 .active-menu {
-  left: 0;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.menu-animatable.menu {
+  -webkit-transition: all 230ms ease-in;
+  transition: all 230ms ease-in;
+}
+
+.active-menu.menu-animatable {
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
 }
 
 .active-menu-button #line1, .active-menu-button #line2, .active-menu-button #line3 {
@@ -280,7 +292,9 @@ h2 {
   color: #333232;
   opacity: 0;
   position: relative;
-  top: 20px;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  will-change: transform;
 }
 
 .border-div {
@@ -288,10 +302,10 @@ h2 {
   height: 5px;
   background-color: #424242;
   position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 20px;
+  margin: 0 auto;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  will-change: transform;
   opacity: 0;
 }
 
@@ -302,27 +316,31 @@ p {
   text-align: center;
   opacity: 0;
   position: relative;
-  top: 20px;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  will-change: transform;
   padding: 5% 5%;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .show-on-scroll-title {
-  -webkit-animation: titleAnim  1s forwards ease;
-          animation: titleAnim  1s forwards ease;
+  -webkit-animation: titleAnim  700ms forwards ease;
+          animation: titleAnim  700ms forwards ease;
 }
 
 @-webkit-keyframes titleAnim {
   100% {
-    top: 0;
+    -webkit-transform: none;
+            transform: none;
     opacity: 1;
   }
 }
 
 @keyframes titleAnim {
   100% {
-    top: 0;
+    -webkit-transform: none;
+            transform: none;
     opacity: 1;
   }
 }
@@ -392,7 +410,8 @@ p {
   background: #949494;
   width: 70px;
   height: 2px;
-  margin: 10px 0 5px 0;
+  margin: 10px auto;
+  margin-bottom: 5px;
 }
 
 .our-history .history {
@@ -500,13 +519,15 @@ p {
 }
 
 .hexagon-vrap-vrap:nth-child(1) {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  will-change: transform;
 }
 
 .hexagon-vrap-vrap:nth-child(2) {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  will-change: transform;
   position: absolute;
   left: 140px;
   top: 80px;
@@ -517,8 +538,9 @@ p {
 }
 
 .hexagon-vrap-vrap:nth-child(3) {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  will-change: transform;
   position: relative;
   left: 0px;
   top: 10px;
@@ -529,8 +551,9 @@ p {
 }
 
 .hexagon-vrap-vrap:nth-child(4) {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  will-change: transform;
   height: 200px;
   width: 240px;
   position: relative;
@@ -591,25 +614,21 @@ p {
 }
 
 .off-viewport {
-  -webkit-animation: hexAnim 1s forwards ease-in-out;
-          animation: hexAnim 1s forwards ease-in-out;
+  -webkit-animation: hexAnim 900ms forwards ease-in-out;
+          animation: hexAnim 900ms forwards ease-in-out;
 }
 
 @-webkit-keyframes hexAnim {
-  0% {
-  }
   100% {
-    margin-top: 0;
-    margin-bottom: 0;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
 @keyframes hexAnim {
-  0% {
-  }
   100% {
-    margin-top: 0;
-    margin-bottom: 0;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
